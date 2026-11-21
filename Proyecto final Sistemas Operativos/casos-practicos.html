@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Casos prácticos empresariales de Sistemas Operativos - UniRemington.">
+  <title>Casos Prácticos | Sistemas Operativos - UniRemington</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner brand-row">
+      <div class="brand-mark" aria-hidden="true">SO</div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:5px">CORPORACIÓN UNIVERSITARIA REMINGTON · INGENIERÍA DE SISTEMAS</p>
+        <p class="brand-title">SISTEMAS OPERATIVOS</p>
+        <p class="brand-subtitle">Fundamentos · Gestión de Procesos · Concurrencia · Sistemas Distribuidos · Laboratorio</p>
+      </div>
+    </div>
+  </header>
+  <div class="nav-wrap">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="index.html"><span aria-hidden="true">⌂</span><span>Inicio</span></a>
+      <a href="temas.html"><span aria-hidden="true">▤</span><span>Temas</span></a>
+      <a href="conceptos.html"><span aria-hidden="true">◇</span><span>Conceptos</span></a>
+      <a href="casos-practicos.html" aria-current="page"><span aria-hidden="true">▣</span><span>Casos prácticos</span></a>
+      <a href="proyecto.html"><span aria-hidden="true">▶</span><span>Laboratorio - Video</span></a>
+      <a href="video-explicativo.html"><span aria-hidden="true">📹</span><span>Video Explicativo</span></a>
+    </nav>
+  </div>
+  <main>
+
+    <section class="hero">
+      <p class="eyebrow">Estudios de Caso y Diagnóstico Real</p>
+      <h1>Casos Prácticos de Sistemas Operativos</h1>
+      <p>Resolución de problemas de rendimiento en equipos cliente, diagnóstico de cuellos de botella por concurrencia y diseño de arquitecturas tolerantes a fallos desarrollados en los talleres prácticos de las <strong>Clases 1, 2 y 3</strong>.</p>
+    </section>
+
+    <div class="section-heading">
+      <h2>Estudios de Caso Desarrollados</h2>
+      <p>Análisis exhaustivo de situaciones empresariales con diagnóstico técnico y soluciones ordenadas.</p>
+    </div>
+
+    <section class="card-grid">
+      <article class="card">
+        <div class="card-icon">01</div>
+        <h3>Caso 1 · Diagnóstico en "Soluciones Digitales S.A.S." (Clase 1)</h3>
+        
+        <div class="case-block">
+          <p><span class="badge badge-rose" style="margin-bottom:6px;">Situación Problémica</span><br>
+          Computador administrativo con demoras críticas y bloqueos frecuentes al abrir varias aplicaciones. El equipo registraba CPU al 90%, RAM al 97%, disco al 100% permanente, más de 98 procesos activos y software de dudosa reputación ("Advanced System Repair Pro").</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-amber" style="margin-bottom:6px;">Causa Técnica</span><br>
+          <em>Hiperpaginación (Thrashing)</em>. Con la RAM prácticamente agotada, el SO mueve masivamente páginas al archivo de paginación en disco. Como el disco es órdenes de magnitud más lento que la RAM, las aplicaciones se congelan esperando datos.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-emerald" style="margin-bottom:6px;">Solución Aplicada</span><br>
+          Procedimiento escalonado de 6 fases (finalización de procesos parásitos, depuración de inicio, desinstalación de optimizadores fraudulentos, configuración del <code>pagefile.sys</code>, diagnóstico con <code>sfc</code> / <code>chkdsk</code> y optimización del navegador).</p>
+        </div>
+
+        <div style="margin-top:12px;">
+          <span class="tag">Hiperpaginación</span>
+          <span class="tag">Memoria Virtual</span>
+          <span class="tag">Soluciones Digitales</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">02</div>
+        <h3>Caso 2 · Cuello de Botella y Ley de Amdahl (Clase 2)</h3>
+        
+        <div class="case-block">
+          <p><span class="badge badge-rose" style="margin-bottom:6px;">Situación Problémica</span><br>
+          Evaluación de un equipo con CPU de 4 núcleos / 8 hilos, 8 GB de RAM DDR4, gráficos integrados (iGPU) y SSD de 256 GB, utilizado para modelado 3D, edición de video y ofimática, el cual experimentaba bloqueos recurrentes.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-amber" style="margin-bottom:6px;">Causa Técnica</span><br>
+          Los 8 hilos del CPU no evitan el cuello de botella cuando la memoria RAM es compartida con el video integrado. Se genera un efecto en cadena: <em>Poca RAM compartida → saturación → cascada de Page Faults → acceso intensivo al disco → lentitud y congelamientos</em>. Además, según la Ley de Amdahl, las partes secuenciales del software de render limitan la aceleración del multinúcleo.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-emerald" style="margin-bottom:6px;">Estrategia de Actualización</span><br>
+          1.° Ampliar RAM a 16 o 32 GB en Dual Channel (mayor impacto y menor costo), 2.° Incorporar GPU dedicada con VRAM propia para liberar la RAM, y 3.° SSD NVMe secundario para almacenamiento de proyectos.</p>
+        </div>
+
+        <div style="margin-top:12px;">
+          <span class="tag">Ley de Amdahl</span>
+          <span class="tag">Multinúcleo</span>
+          <span class="tag">RAM vs iGPU</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">03</div>
+        <h3>Caso 3 · Arquitectura Distribuida "MULTISERVICIOS S.A." (Clase 3)</h3>
+        
+        <div class="case-block">
+          <p><span class="badge badge-rose" style="margin-bottom:6px;">Situación Problémica</span><br>
+          Empresa comercial con 7 sedes que operaba bajo un modelo centralizado en un único servidor. En horas pico se producían cuellos de botella de red y cómputo, y cualquier caída del servidor detenía por completo las ventas y la facturación de toda la compañía.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-cyan" style="margin-bottom:6px;">Solución Distribuida</span><br>
+          Migración a una arquitectura multicapa con balanceador de carga global, clúster de microservicios (inventario, facturación, ventas), réplicas locales de base de datos en sedes, llamadas RPC para consultas rápidas de precios y colas de mensajes persistentes para sincronización de stock.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-emerald" style="margin-bottom:6px;">Tolerancia y Archivos</span><br>
+          Redundancia activo-activo con detección por latidos (heartbeats), failover automático, respaldos horarios inmutables y Sistema de Archivos Distribuido (DFS) con bloqueos para evitar modificaciones simultáneas y permisos por roles (RBAC).</p>
+        </div>
+
+        <div style="margin-top:12px;">
+          <span class="tag">Sistemas Distribuidos</span>
+          <span class="tag">MULTISERVICIOS S.A.</span>
+          <span class="tag">Tolerancia a Fallos</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="content-panel">
+      <h2>Plan de Mejoramiento Preventivo Empresarial (Clase 1)</h2>
+      <p>Medidas preventivas formuladas en el taller práctico de Soluciones Digitales S.A.S. para asegurar la estabilidad operativa a largo plazo:</p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>N.°</th>
+              <th>Acción Preventiva</th>
+              <th>Qué Previene</th>
+              <th>Frecuencia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Monitoreo periódico con Administrador de Tareas y Visor de Eventos</td>
+              <td>Saturación imprevista de CPU, RAM y disco antes de que afecte al usuario.</td>
+              <td>Semanal</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Copias de seguridad automáticas y puntos de restauración</td>
+              <td>Pérdida de información por fallos lógicos, bloqueos o errores de actualización.</td>
+              <td>Diaria / Semanal</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Actualización controlada del sistema operativo y controladores</td>
+              <td>Vulnerabilidades de seguridad e inestabilidades por drivers defectuosos.</td>
+              <td>Mensual</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Gestión de permisos y política de software autorizado</td>
+              <td>Instalación de software espía, programas de optimización dudosa o malware.</td>
+              <td>Permanente</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Mantenimiento de almacenamiento y limpieza física</td>
+              <td>Sobrecalentamiento, fallos de disco y falta de espacio para memoria virtual.</td>
+              <td>Trimestral</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Capacitación al usuario administrativo</td>
+              <td>Que el usuario sobrecargue el sistema con decenas de pestañas y procesos huérfanos.</td>
+              <td>Semestral</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-panel">
+      <h2>Comparativa de Modelos de Comunicación en MULTISERVICIOS S.A. (Clase 3)</h2>
+      <p>Criterio de asignación de modelos de comunicación según los requisitos de cada proceso de negocio:</p>
+      <ul>
+        <li><strong>Proceso de Facturación (Comunicación Síncrona):</strong> Requiere confirmación inmediata del pago y generación del número consecutivo fiscal antes de entregar el producto al cliente en caja. La operación debe ser atómica y consistente.</li>
+        <li><strong>Sincronización de Inventario (Comunicación Asíncrona):</strong> Utiliza colas de mensajes persistentes con confirmación de entrega (ACK). Permite que la venta se registre inmediatamente en el terminal local sin congelar la atención si la red presenta lentitud temporal.</li>
+        <li><strong>Notificaciones y Alertas (Publicación / Suscripción):</strong> El módulo de inventario emite eventos de stock bajo a canales temáticos consumidos por compras y gerencia de forma totalmente desacoplada.</li>
+      </ul>
+      <p class="note">Estos estudios de caso demuestran que los conceptos teóricos de sistemas operativos (planificación, gestión de memoria, concurrencia y tolerancia a fallos) resuelven problemas críticos de infraestructura y continuidad operativa en las empresas.</p>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Sistemas Operativos · Corporación Universitaria Remington · Lina Otalvaro & Sebastián Jaramillo</span>
+    </div>
+  </footer>
+</body>
+</html>

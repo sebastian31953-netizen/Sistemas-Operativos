@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temas y contenidos teóricos de las clases de Sistemas Operativos - UniRemington.">
+  <title>Temas y Clases | Sistemas Operativos - UniRemington</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner brand-row">
+      <div class="brand-mark" aria-hidden="true">SO</div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:5px">CORPORACIÓN UNIVERSITARIA REMINGTON · INGENIERÍA DE SISTEMAS</p>
+        <p class="brand-title">SISTEMAS OPERATIVOS</p>
+        <p class="brand-subtitle">Fundamentos · Gestión de Procesos · Concurrencia · Sistemas Distribuidos · Laboratorio</p>
+      </div>
+    </div>
+  </header>
+  <div class="nav-wrap">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="index.html"><span aria-hidden="true">⌂</span><span>Inicio</span></a>
+      <a href="temas.html" aria-current="page"><span aria-hidden="true">▤</span><span>Temas</span></a>
+      <a href="conceptos.html"><span aria-hidden="true">◇</span><span>Conceptos</span></a>
+      <a href="casos-practicos.html"><span aria-hidden="true">▣</span><span>Casos prácticos</span></a>
+      <a href="proyecto.html"><span aria-hidden="true">▶</span><span>Laboratorio - Video</span></a>
+      <a href="video-explicativo.html"><span aria-hidden="true">📹</span><span>Video Explicativo</span></a>
+    </nav>
+  </div>
+  <main>
+
+    <section class="hero">
+      <p class="eyebrow">Ruta Temática Curricular</p>
+      <h1>Temas y Talleres Teóricos del Curso</h1>
+      <p>Desarrollo estructurado de los contenidos analizados en los talleres teóricos de <strong>Clase 1</strong>, <strong>Clase 2</strong> y <strong>Clase 3</strong>, con base en la bibliografía canónica de Tanenbaum, Arpaci-Dusseau (OSTEP), Stallings y documentación técnica de la industria.</p>
+    </section>
+
+    <div class="section-heading">
+      <h2>Módulos Temáticos por Clase</h2>
+      <p>Profundización en los conceptos, esquemas y modelos explicados a lo largo de las sesiones académicas.</p>
+    </div>
+
+    <section class="card-grid">
+      <article class="card">
+        <div class="card-icon">01</div>
+        <h3>Clase 1 · Introducción y Fundamentos del SO</h3>
+        
+        <div class="case-block">
+          <p><span class="badge badge-cyan" style="margin-bottom:6px;">Propósito y Abstracción</span><br>
+          El sistema operativo actúa como software intermediario que administra el hardware y facilita la interacción del usuario y las aplicaciones: <code>Usuario → Aplicación → SO → Hardware</code>.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-emerald" style="margin-bottom:6px;">Cinco Funciones Críticas</span><br>
+          Gestión de procesos (crear, suspender y reanudar tareas), administración de memoria RAM, gestión lógica de archivos en disco, manejo de dispositivos E/S con controladores y provisión de interfaz de usuario.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-amber" style="margin-bottom:6px;">Administrador de Recursos</span><br>
+          Opera como un director de orquesta que distribuye equitativamente CPU, memoria y almacenamiento, priorizando tareas para asegurar la estabilidad del computador.</p>
+        </div>
+
+        <div style="margin-top:12px;">
+          <span class="tag">Intermediario</span>
+          <span class="tag">Funciones del SO</span>
+          <span class="tag">Administrador de Recursos</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">02</div>
+        <h3>Clase 2 · Procesos, Concurrencia y Sincronización</h3>
+        
+        <div class="case-block">
+          <p><span class="badge badge-cyan" style="margin-bottom:6px;">Programa vs Proceso</span><br>
+          El programa es una entidad pasiva y estática en disco; el proceso es la entidad activa y dinámica en ejecución con memoria RAM y recursos asignados.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-violet" style="margin-bottom:6px;">PCB y Ciclo de Vida</span><br>
+          El Bloque de Control de Proceso guarda PID, estado, contador de programa (PC), registros y prioridades. Ciclo de 5 estados: <em>Nuevo → Listo → Ejecución → Bloqueado → Terminado</em>.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-rose" style="margin-bottom:6px;">Concurrencia y Sincronización</span><br>
+          Condiciones de carrera, sección crítica (criterios de Dijkstra: exclusión mutua, progreso y espera limitada) y semáforos binarios/contadores con operaciones atómicas <code>wait()</code> y <code>signal()</code>.</p>
+        </div>
+
+        <div style="margin-top:12px;">
+          <span class="tag">Programa vs Proceso</span>
+          <span class="tag">PCB</span>
+          <span class="tag">Condición de Carrera</span>
+          <span class="tag">Semáforos</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">03</div>
+        <h3>Clase 3 · Sistemas Operativos Distribuidos</h3>
+        
+        <div class="case-block">
+          <p><span class="badge badge-cyan" style="margin-bottom:6px;">Concepto y Transparencia</span><br>
+          Conjunto de computadoras independientes coordinadas mediante red percibidas como un único sistema, ocultando al usuario la ubicación física de los recursos.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-emerald" style="margin-bottom:6px;">Arquitectura Cliente-Servidor</span><br>
+          Modelo multicapa con balanceador global, servidores de aplicaciones (microservicios), réplicas de datos locales, llamadas RPC y colas asíncronas de mensajes.</p>
+        </div>
+
+        <div class="case-block">
+          <p><span class="badge badge-violet" style="margin-bottom:6px;">Tolerancia y Archivos (DFS)</span><br>
+          Redundancia activo-activo con detección por latidos (heartbeats), failover automático en segundos y Sistemas de Archivos Distribuidos con permisos RBAC y bloqueos.</p>
+        </div>
+
+        <div style="margin-top:12px;">
+          <span class="tag">Sistemas Distribuidos</span>
+          <span class="tag">Cliente-Servidor</span>
+          <span class="tag">RPC y Mensajería</span>
+          <span class="tag">DFS</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="content-panel">
+      <h2>Comandos Esenciales de Terminal: Comparativa Linux vs Windows</h2>
+      <p>En el taller de la Clase 1 se analizó la Interfaz de Línea de Comandos (CLI) por su bajo consumo de recursos, precisión y capacidad de automatización. Estos son los comandos básicos comparados:</p>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Comando Linux</th>
+              <th>Sintaxis</th>
+              <th>Propósito</th>
+              <th>Ejemplo</th>
+              <th>Equivalente Windows</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>pwd</code></td>
+              <td><code>pwd [opción]</code></td>
+              <td>Muestra la ruta del directorio de trabajo actual</td>
+              <td><code>pwd</code></td>
+              <td><code>cd</code> (sin argumentos)</td>
+            </tr>
+            <tr>
+              <td><code>ls</code></td>
+              <td><code>ls [opción] [archivo/dir]</code></td>
+              <td>Lista los archivos y carpetas del directorio</td>
+              <td><code>ls -l /home</code></td>
+              <td><code>dir</code></td>
+            </tr>
+            <tr>
+              <td><code>mkdir</code></td>
+              <td><code>mkdir [opción] directorio</code></td>
+              <td>Crea uno o varios directorios nuevos</td>
+              <td><code>mkdir proyectos</code></td>
+              <td><code>mkdir</code> / <code>md</code></td>
+            </tr>
+            <tr>
+              <td><code>cp</code></td>
+              <td><code>cp [opción] origen destino</code></td>
+              <td>Copia archivos o directorios de una ruta a otra</td>
+              <td><code>cp notas.txt respaldo.txt</code></td>
+              <td><code>copy</code> / <code>xcopy</code></td>
+            </tr>
+            <tr>
+              <td><code>rm</code></td>
+              <td><code>rm [opción] archivo</code></td>
+              <td>Elimina archivos de forma permanente</td>
+              <td><code>rm borrador.txt</code></td>
+              <td><code>del</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-panel">
+      <h2>Ciclo de Vida del Proceso: Ejemplo Práctico de Impresión (Clase 2)</h2>
+      <p>Las transiciones de estado descritas en el taller teórico ilustran con precisión cómo opera el planificador del kernel:</p>
+      
+      <div class="case-block">
+        <p><span class="badge badge-cyan" style="margin-bottom:6px;">1. Nuevo → Listo</span><br>
+        El usuario hace clic en “Imprimir”; el sistema operativo crea el proceso, asigna su PCB y lo carga en la memoria RAM en la cola de listos.</p>
+      </div>
+
+      <div class="case-block">
+        <p><span class="badge badge-emerald" style="margin-bottom:6px;">2. Listo → Ejecución</span><br>
+        El planificador de la CPU le asigna un quantum de tiempo para procesar y estructurar el documento.</p>
+      </div>
+
+      <div class="case-block">
+        <p><span class="badge badge-amber" style="margin-bottom:6px;">3. Ejecución → Bloqueado (Waiting)</span><br>
+        El proceso solicita enviar el flujo de datos a la impresora física. Como el periférico de E/S es mecánicamente más lento, el proceso cede voluntariamente la CPU para no desperdiciar ciclos de reloj.</p>
+      </div>
+
+      <div class="case-block">
+        <p><span class="badge badge-violet" style="margin-bottom:6px;">4. Bloqueado → Listo</span><br>
+        La impresora termina de recibir los datos y envía una interrupción de hardware al SO. El proceso reingresa a la cola de listos.</p>
+      </div>
+
+      <div class="case-block">
+        <p><span class="badge badge-cyan" style="margin-bottom:6px;">5. Listo → Ejecución</span><br>
+        El planificador asigna CPU nuevamente para cerrar los descriptores de archivos de trabajo.</p>
+      </div>
+
+      <div class="case-block">
+        <p><span class="badge badge-rose" style="margin-bottom:6px;">6. Ejecución → Terminado</span><br>
+        El proceso finaliza su tarea y el sistema operativo libera su memoria RAM y destruye el PCB.</p>
+      </div>
+    </section>
+
+    <section class="content-panel">
+      <h2>Bibliografía Formal de los Talleres Teóricos</h2>
+      <ul>
+        <li><strong>Arpaci-Dusseau, R. H., & Arpaci-Dusseau, A. C.</strong> (2018). <em>Operating Systems: Three Easy Pieces</em> (OSTEP). Arpaci-Dusseau Books.</li>
+        <li><strong>Tanenbaum, A. S., & Bos, H.</strong> (2015). <em>Modern Operating Systems</em> (4.ª ed.). Pearson Education.</li>
+        <li><strong>Stallings, W.</strong> (2018). <em>Operating Systems: Internals and Design Principles</em> (9.ª ed.). Pearson.</li>
+        <li><strong>Coffman, E. G., Elphick, M. J., & Shoshani, A.</strong> (1971). <em>System Deadlocks</em>. ACM Computing Surveys, 3(2), 67-78.</li>
+        <li><strong>Hennessy, J. L., & Patterson, D. A.</strong> (2017). <em>Computer Architecture: A Quantitative Approach</em> (6.ª ed.). Morgan Kaufmann.</li>
+        <li><strong>Documentación Técnica Institucional:</strong> IBM Cloud & AIX Docs (2026), Microsoft Learn (Access Control & Memory Management, 2026), AWS Well-Architected Framework (2023) y Red Hat Microservices Architecture (2023).</li>
+      </ul>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Sistemas Operativos · Corporación Universitaria Remington · Lina Otalvaro & Sebastián Jaramillo</span>
+    </div>
+  </footer>
+</body>
+</html>
